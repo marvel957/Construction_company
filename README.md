@@ -1,2 +1,2 @@
 # Construction_company
-* a test project for 
+* a test project for a construction company
