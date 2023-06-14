@@ -1,55 +1,352 @@
-/* Reset default browser styles */
-body, h1, h2, p, ul, li, form {
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.underline {
+  width: 50px;
+  height: 3px;
+  background-color: rgb(245, 203, 17);
+  margin: 0 auto;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+section.header {
+  background-image: linear-gradient(
+    90deg,
+    rgb(246, 250, 246) 25%,
+    25%,
+    rgb(245, 203, 17)
+  );
+  padding-bottom: 26px;
+}
+
+.content-wrapper {
+  padding: 18px;
+}
+
+.logo-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.5em;
+}
+.logo span {
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+ul a:hover {
+  color: black;
+}
+
+/* mobile nav */
+.mobile-nav-toggle {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  display: none;
+}
+
+.mobile-nav-toggle .bar {
+  width: 80%;
+  height: 4px;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
+}
+
+.mobile-nav-toggle .bar::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 8px;
+  background-color: white;
+}
+.mobile-nav-toggle .bar::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 8px;
+  background-color: white;
+}
+
+.mobile-nav {
+  background-color: rgba(245, 203, 17);
+  position: absolute;
+  right: 0;
+  top: -18px;
+  padding: 70px;
+  z-index: 10000;
+  display: none;
+  transition: all 0.35s ease-in;
+}
+
+.mobile-nav ul {
+  flex-direction: column;
+}
+
+.mobile-nav .mobile-nav-toggle {
+  position: absolute;
+  right: 16px;
+  top: 32px;
+}
+
+.mobile-nav .mobile-nav-toggle .bar {
+  transform: rotate(45deg);
+}
+.mobile-nav .mobile-nav-toggle .bar::after {
+  transform: rotate(-90deg) translate(-8px, -8%);
+}
+.mobile-nav .mobile-nav-toggle .bar::before {
+  display: none;
+}
+/* End mobile nav */
+.hero {
+  padding-top: 10%;
+  padding-left: 20px;
+  /* margin-top: 20px; */
+  width: 100%;
+  height: 500px;
+  background-image: url(./mainbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 30%,
+    rgba(255, 255, 255, 0)
+  );
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.hero_message {
+  position: absolute;
+  width: 50%;
+  color: white;
+  z-index: 1000;
+}
+
+.hero_message p.tagline {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: rgb(245, 203, 17);
+}
+
+.hero_message h1 {
+  font-size: 4em;
+  line-height: 1;
+}
+
+.hero_message .message {
+  margin-top: 15px;
+}
+
+.hero_message .message .count {
+  font-weight: bold;
+  color: rgb(245, 203, 17);
+}
+
+.why-choose-us {
+  padding: 120px 0;
+}
+
+.why-choose-us .section-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.why-choose-us h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-block: 18px;
+}
+
+.project-display-grid {
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 500px 500px;
+  gap: 10px;
+}
+
+.project {
+  background-image: url(./proj.jpg);
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  transition: all 0.35s ease-in-out;
+}
+.project::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.project:hover {
+  background-size: 120%;
+}
+
+.project:hover::after {
+  background-color: rgba(245, 203, 17, 0.7);
+}
+.proj1 {
+  background-image: url(./proj1.jpg);
+}
+.proj2 {
+  background-image: url(./proj2.jpg);
+}
+.proj3 {
+  background-image: url(./proj3.jpg);
+}
+.proj4 {
+  background-image: url(./proj4.jpg);
+}
+.proj5 {
+  background-image: url(./proj5.jpg);
+}
+
+.project-description {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  z-index: 100;
+}
+
+.project-description .location,
+.project-description a {
+  text-decoration: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.project-description h3 {
+  margin-block: 5px;
+  font-size: 1.5em;
+}
+
+.project-description a {
+  display: inline-block;
+  padding: 0.5em 1.1em;
+  color: white;
+  background-color: rgb(245, 203, 17);
+}
+
+footer {
+  background-color: rgb(36, 29, 37);
+  padding: 20px;
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .logo {
+  margin-bottom: 10px;
+}
+
+footer nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer nav ul li {
+  margin-right: 10px;
+}
+
+footer nav ul li:last-child {
+  margin-right: 0;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .hero_message h1 {
+    font-size: 3em;
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .project-display-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 500px);
   }
-  
-  header {
-    background-color: #333;
-    padding: 20px;
+
+  .main-nav {
+    display: none;
   }
-  
- 
-  
-  .banner {
-    background-image: url('banner.jpg');
-    background-size: cover;
-    color: #fff;
-    padding: 100px;
-    text-align: center;
+
+  .mobile-nav-toggle,
+  .mobile-nav {
+    display: block;
   }
-  
-  .banner h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+
+  .mobile-nav.hidden {
+    left: 1000px;
   }
-  
-  .services {
-    background-color: #f5f5f5;
-    padding: 50px;
+}
+
+@media (max-width: 480px) {
+  .hero_message h1 {
+    font-size: 2.5em;
+    line-height: 0.8;
   }
-  
-  .services h2 {
-    margin-bottom: 20px;
-  }
-  
-  .services ul {
-    list-style-type: disc;
-    margin-left: 30px;
-  }
-  
-  .about {
-    padding: 50px;
-  }
-  
-  .about h2 {
-    margin-bottom: 20px;
-  }
-  
-  
+}

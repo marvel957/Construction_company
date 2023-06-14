@@ -4,11 +4,138 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>KY Constructions</title>
   </head>
   <body>
-    <div class="container">
-      <section class="header"></section>
-    </div>
+    <section class="header">
+      <div class="content-wrapper">
+        <div class="logo-nav">
+          <div class="logo">
+            <p><span>KY</span>Constructions</p>
+          </div>
+          <nav class="main-nav">
+            <ul class="main-navigation">
+              <li class="nav_item"><a href="#" class="nav_link">Home</a></li>
+              <li class="nav_item">
+                <a href="#" class="nav_link">About</a>
+              </li>
+              <li class="nav_item">
+                <a href="#" class="nav_link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="mobile-nav-toggle" id="show">
+            <div class="bar"></div>
+          </button>
+          <div class="mobile-nav hidden">
+            <button class="mobile-nav-toggle" id="hide">
+              <div class="bar"></div>
+            </button>
+            <nav>
+              <ul class="main-navigation">
+                <li class="nav_item"><a href="#" class="nav_link">Home</a></li>
+                <li class="nav_item">
+                  <a href="#" class="nav_link">About</a>
+                </li>
+                <li class="nav_item">
+                  <a href="#" class="nav_link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="hero">
+        <div class="hero_message">
+          <p class="tagline">Professional & expert</p>
+          <h1>Commited to superior quality and result</h1>
+          <p class="message">
+            Work with us, the globally recognised brand recognised for quality
+            with over <span class="count">300</span> projects completeding
+            <span class="count">56</span> countries
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="why-choose-us">
+      <p class="section-title">featured projects</p>
+      <h2>Engineering your dream with us.</h2>
+      <div class="underline"></div>
+      <div class="project-display-grid">
+        <div class="project proj0">
+          <div class="project-description">
+            <p class="location">OFFICE TOWER</p>
+            <h3>Loka Digita</h3>
+            <a href="#" class="view">view project</a>
+          </div>
+        </div>
+        <div class="project proj1">
+          <div class="project-description">
+            <p class="location">OFFICE TOWER</p>
+            <h3>Loka Digita</h3>
+            <a href="#" class="view">view project</a>
+          </div>
+        </div>
+        <div class="project proj2">
+          <div class="project-description">
+            <p class="location">OFFICE TOWER</p>
+            <h3>Loka Digita</h3>
+            <a href="#" class="view">view project</a>
+          </div>
+        </div>
+        <div class="project proj3">
+          <div class="project-description">
+            <p class="location">OFFICE TOWER</p>
+            <h3>Loka Digita</h3>
+            <a href="#" class="view">view project</a>
+          </div>
+        </div>
+        <div class="project proj4">
+          <div class="project-description">
+            <p class="location">OFFICE TOWER</p>
+            <h3>Loka Digita</h3>
+            <a href="#" class="view">view project</a>
+          </div>
+        </div>
+        <div class="project proj5">
+          <div class="project-description">
+            <p class="location">OFFICE TOWER</p>
+            <h3>Loka Digita</h3>
+            <a href="#" class="view">view project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="logo">
+          <p><span>KY</span>Constructions</p>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      const mobileShow = document.getElementById("show");
+      const mobileHide = document.getElementById("hide");
+
+      mobileShow.addEventListener("click", (e) => {
+        e.preventDefault();
+        const mobileNav = document.querySelector(".mobile-nav");
+        mobileNav.classList.remove("hidden");
+      });
+      mobileHide.addEventListener("click", (e) => {
+        e.preventDefault();
+        const mobileNav = document.querySelector(".mobile-nav");
+        mobileNav.classList.add("hidden");
+      });
+    </script>
   </body>
 </html>
