@@ -2,21 +2,89 @@
 <html>
 <head>
   <title>Construction Company - Contact</title>
+  <link rel="stylesheet" href="./css/style.css">
+  
   <link rel="stylesheet" type="text/css" href="./css/contact.css">
-  <script src="script.js"></script>
+  
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="active"><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <section class="header">
+    <div class="content-wrapper">
+      <div class="logo-nav">
+        <div class="logo">
+          <p><span>KY</span>Constructions</p>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-navigation">
+            <li class="nav_item"><a href="index.html" class="nav_link">Home</a></li>
+            <li class="nav_item">
+              <a href="#" class="nav_link">About</a>
+            </li>
+            <li class="nav_item">
+              <a href="contact.html" class="nav_link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="mobile-nav-toggle" id="show">
+          <div class="bar"></div>
+        </button>
+        <div class="mobile-nav hidden">
+          <button class="mobile-nav-toggle" id="hide">
+            <div class="bar"></div>
+          </button>
+          <nav>
+            <ul class="main-navigation">
+              <li class="nav_item"><a href="#" class="nav_link">Home</a></li>
+              <li class="nav_item">
+                <a href="#" class="nav_link">About</a>
+              </li>
+              <li class="nav_item">
+                <a href="#" class="nav_link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="hero_message">
+        <p class="tagline">Professional & expert</p>
+        <h1>Contact Us</h1>
+        <p class="message">
+          Work with us, the globally recognised brand recognised for quality
+          with over <span class="count">300</span> projects completeding
+          <span class="count">56</span> countries
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact__details">
+    <div class="contact__office">
+        <i class="fa-solid fa-building fa-2xl" style="color: #f5cb11;"></i>
+        <h2>Head Office</h2>
+        
+        <p>Jalan Cempaka Wangi No 22
+            Jakarta - Indonesia</p>
 
-  <section class="contact">
+    </div>
+    <div class="contact__email">
+        <i class="fa-solid fa-envelope-open-text fa-2xl"  style="color: #f5cb11;"></i>
+        
+        <h2>Email Us</h2>
+        <p>hamsik957@gmail.com, marvel@gmail.com</p>
+        
+
+    </div>
+    <div class="contact__phone">
+        <i class="fa-solid fa-phone fa-2xl" style="color: #f5cb11;"></i>
+        <h2>Call Us</h2>
+        <p>08105140699, 08105196709</p>
+
+    </div>
+  </section>
+
+  <section class="contact__form">
     <h2>Contact Us</h2>
     <form id="contactForm" action="#" method="post">
       <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -25,6 +93,36 @@
       <button type="submit">Send Message</button>
     </form>
   </section>
-
   <footer>
-   
+    <div class="footer-container">
+      <div class="logo">
+        <p><span>KY</span>Constructions</p>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    const mobileShow = document.getElementById("show");
+    const mobileHide = document.getElementById("hide");
+
+    mobileShow.addEventListener("click", (e) => {
+      e.preventDefault();
+      const mobileNav = document.querySelector(".mobile-nav");
+      mobileNav.classList.remove("hidden");
+    });
+    mobileHide.addEventListener("click", (e) => {
+      e.preventDefault();
+      const mobileNav = document.querySelector(".mobile-nav");
+      mobileNav.classList.add("hidden");
+    });
+  </script>
+    
+  </body>
+  </html>
