@@ -341,6 +341,7 @@ footer nav ul li a {
 
   .mobile-nav.hidden {
     left: 1000px;
+    display: none;
   }
 }
 
